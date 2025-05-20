@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Ubicación:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewNearbySalon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCurrentLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Salón más cercano: N/A"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center_horizontal"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddSalon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@android:color/white"
+        app:backgroundTint="?attr/colorPrimaryVariant" android:contentDescription="Añadir Salón" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabShowCredits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_dialog_info"
+        app:tint="@android:color/white"
+        app:fabSize="mini"
+        app:backgroundTint="?attr/colorPrimaryVariant"
+        android:contentDescription="Créditos" />
+
+    <LinearLayout
+        android:id="@+id/layoutImportExportButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/fabAddSalon" android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonExportJson"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Exportar Datos" />
+
+        <Button
+            android:id="@+id/buttonImportJson"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Importar Datos" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonManageSalons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layoutImportExportButtons"
+        android:layout_marginBottom="8dp"
+        android:text="Administrar Salones" />
+
+    <Button
+        android:id="@+id/buttonRefreshLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonManageSalons" android:layout_marginBottom="8dp"
+        android:text="Actualizar Ubicación" />
+
+
+    <ScrollView
+        android:id="@+id/scrollViewDebug"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/textViewNearbySalon"
+        android:layout_above="@id/buttonRefreshLocation"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#E0E0E0"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textViewDebugWifiInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Información de Wi-Fi para depuración aparecerá aquí."
+            android:textColor="#000000" /> </ScrollView>
+
+
+</RelativeLayout>
