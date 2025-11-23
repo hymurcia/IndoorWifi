@@ -7,7 +7,7 @@ IndoorWifi  es una aplicación Android diseñada para la localización en interi
 Este proyecto fue desarrollado como parte de la asignatura de Machine Learning 802 por Hernan Yessid Murcia Salinas y Carlos Felipe Gomez Plazas.
 
 ## 📥 Descargar aplicación
-[![Descargar APK](https://img.shields.io/badge/Descargar-APK-green?style=for-the-badge)] (https://github.com/hymurcia/IndoorWifi/blob/master/IndoorWifi.apk?raw=1)
+[![Descargar APK](https://img.shields.io/badge/Descargar-APK-green?style=for-the-badge)](https://github.com/hymurcia/IndoorWifi/blob/master/IndoorWifi.apk?raw=1)
 
 
 
